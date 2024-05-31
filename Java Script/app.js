@@ -1,10 +1,5 @@
 var modal = document.getElementById("myModal");
 
-const span = document.getElementsByClassName("close")[0];
-
-document.querySelector(".close").addEventListener("click", () => {
-  document.querySelector("#myModal").style.display = "none";
-});
 
 let user;
 let gameOver = false; // משתנה שמציין אם המשחק נגמר
