@@ -1,0 +1,88 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+header p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.form h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+}
+
+.form p {
+  color: #666;
+}
+
+.form p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form.login-form {
+  display: block;
+}
+
+.form.register-form {
+  display: none;
+}
+
+/* Show the forms based on hash */
+:target .login-form {
+  display: block;
+}
+
+:target .register-form {
+  display: block;
+}
