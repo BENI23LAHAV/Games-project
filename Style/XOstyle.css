@@ -32,6 +32,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   background-color: black;
+  cursor: pointer;
 }
 .square {
   background-color: gainsboro;
