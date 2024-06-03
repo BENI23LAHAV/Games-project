@@ -14,7 +14,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  width: 400px;
   text-align: center;
 }
 
@@ -23,35 +23,32 @@ header h1 {
   color: #333;
 }
 
-header p {
-  color: #666;
-  margin-bottom: 20px;
+header #logout {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.form-container {
+.games-container {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
-.form {
-  display: none;
+.game {
   margin-bottom: 20px;
 }
 
-.form h2 {
-  margin: 0 0 20px 0;
+.game h2 {
+  margin: 0 0 10px 0;
   color: #333;
 }
 
-.form input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form button {
+.play-button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -59,21 +56,5 @@ header p {
   background-color: #28a745;
   color: #fff;
   font-size: 16px;
-}
-
-.form p {
-  color: #666;
-}
-
-.form p a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.form.login-form {
-  display: block;
-}
-
-.form.register-form {
-  display: none;
+  cursor: pointer;
 }

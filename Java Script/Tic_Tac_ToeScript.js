@@ -217,6 +217,10 @@ function userWin() {
   // משתמש ניצח
   document.querySelector("#turn").innerText = "You are the Winner";
   showRestartButton();
+  let user = JSON.parse(localStorage.getItem("current user"));
+  user.score += 5;
+  localStorage.setItem(user.user_name, JSON.stringify(user));
+  localStorage.setItem("current user", JSON.stringify(user));
 }
 
 function computerWin() {
@@ -229,6 +233,10 @@ function drawGame() {
   // תיקו
   document.querySelector("#turn").innerText = "The game ended in a draw";
   showRestartButton();
+  let user = JSON.parse(localStorage.getItem("current user"));
+  user.score += 1;
+  localStorage.setItem(user.user_name, JSON.stringify(user));
+  localStorage.setItem("current user", JSON.stringify(user));
 }
 
 function showRestartButton() {

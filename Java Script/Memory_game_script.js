@@ -107,7 +107,12 @@ function endGame() {
   } else {
     document.querySelector(".modal-content").innerText = "You win the game";
     document.querySelector(".modal-content").style.color = "green";
+    let user = JSON.parse(localStorage.getItem("current user"));
+    user.score += 5;
+    localStorage.setItem(user.user_name, JSON.stringify(user)); //עדכון ניקוד בlocal storage
+    localStorage.setItem("current user", JSON.stringify(user));
   }
+  document.querySelector("#memory-row").style.display = "flex";
   document.querySelector("#myModal").style.display = "block";
 
   let but = document.createElement("button");
