@@ -79,5 +79,3 @@ function registe() {
     }, 2000);
   }
 }
-// localStorage.removeItem("Beni Lahav");
-// localStorage.removeItem("בני");
