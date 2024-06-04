@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="../Style/Memory_game2Style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="home">Home</button>
+        <button id="logout">Logout</button>
+        <button id="settings">Settings</button>
+      </nav>
+      <h1>Let's Play Memory Game</h1>
+    </header>
+    <main>
+      <div id="timer" style="display: none">Time left: 5</div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <p>Instructions</p>
+          <ol>
+            <li>The goal of the game is... to win😊</li>
+            <li>
+              Each time a number of images will appear in front of you in
+              varying order, and after a few seconds they will disappear
+            </li>
+            <li>You must remember the pictures and their correct order</li>
+            <li>
+              You must assemble the images in the correct order and when
+              finished click send
+            </li>
+          </ol>
+          <button id="understand">Ok let's start</button>
+        </div>
+      </div>
+      <div class="game-container">
+        <div class="row" id="memory-row">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+        <div class="row" id="input-row">
+          <div class="input-item">
+            <button class="up-button">Up</button>
+            <div class="input-box"></div>
+            <button class="down-button">Down</button>
+          </div>
+          <div class="input-item">
+            <button class="up-button">Up</button>
+            <div class="input-box"></div>
+            <button class="down-button">Down</button>
+          </div>
+          <div class="input-item">
+            <button class="up-button">Up</button>
+            <div class="input-box"></div>
+            <button class="down-button">Down</button>
+          </div>
+          <div class="input-item">
+            <button class="up-button">Up</button>
+            <div class="input-box"></div>
+            <button class="down-button">Down</button>
+          </div>
+          <div class="input-item">
+            <button class="up-button">Up</button>
+            <div class="input-box"></div>
+            <button class="down-button">Down</button>
+          </div>
+        </div>
+        <button class="submit-button">Send</button>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="../Java Script/memory_gameScript2.js"></script>
+  </body>
+</html>

@@ -26,7 +26,7 @@ function startGame() {
     document.querySelector("#turn").innerText = "Computer starts";
     setTimeout(() => {
       computerTurn();
-    }, 500); // השהיה של חצי שניה לפני המהלך של המחשב
+    }, 0.5); // השהיה של חצי שניה לפני המהלך של המחשב
   } else {
     document.querySelector("#turn").innerText = "Your turn";
   }
@@ -226,6 +226,7 @@ function userWin() {
 function computerWin() {
   // מחשב ניצח
   document.querySelector("#turn").innerText = "The computer is the Winner";
+  showLossImage();
   showRestartButton();
 }
 
@@ -246,6 +247,21 @@ function showRestartButton() {
   document.querySelector("#turn").appendChild(restartButton);
 }
 
+function showLossImage() {
+  const lossImage = document.createElement("img");
+  lossImage.src = "../images/Monster.png"; // נתיב לתמונה
+  lossImage.className = "loss-image";
+  document.body.appendChild(lossImage);
+
+  setTimeout(() => {
+    lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
+  }, 0);
+
+  setTimeout(() => {
+    lossImage.remove(); // מסיר את התמונה אחרי 2 שניות
+  }, 2000);
+}
+
 for (let element of children) {
   //הוספת event לכל משבצת  בלוח
   element.addEventListener("click", game);
@@ -255,3 +271,17 @@ function getNumber(max) {
   //מחזיר מספר רנדומלי מאפס עד הערך המסופק
   return Math.floor(Math.random() * max);
 }
+document.querySelector("#logout").addEventListener("click", () => {
+  // הוספת תפקוד לוג-אאוט
+  window.location.replace("../index.html");
+});
+
+document.querySelector("#home").addEventListener("click", () => {
+  // הוספת ניווט לעמוד הבית
+  window.location.replace("../Pages/menu.html");
+});
+
+document.querySelector("#settings").addEventListener("click", () => {
+  // הוספת ניווט לעמוד ההגדרות
+  window.location.replace("../Settings/settings.html");
+});

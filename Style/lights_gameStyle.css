@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  margin-bottom: 5vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+header nav button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header nav button#home:hover,
+header nav button#settings:hover {
+  background-color: #0056b3;
+}
+
+header nav button#logout {
+  background-color: red;
+}
+
+header nav button#logout:hover {
+  background-color: #d60000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.lights-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.light {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.light.red {
+  background-color: red;
+  opacity: 0.2;
+}
+
+.light.green {
+  background-color: green;
+  opacity: 0.2;
+}
+
+.light.blue {
+  background-color: blue;
+  opacity: 0.2;
+}
+
+.light.yellow {
+  background-color: yellow;
+  opacity: 0.2;
+}
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-content button:hover {
+  background-color: #218838;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer button#again {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+footer button#again:hover {
+  background-color: #0056b3;
+}
+
+.loss-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s;
+}

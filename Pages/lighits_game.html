@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lights Game</title>
+    <link rel="stylesheet" href="../Style/lights_gameStyle.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="home">Home</button>
+        <button id="logout">Logout</button>
+        <button id="settings">Settings</button>
+      </nav>
+      <h1>Let's Play Lights Game</h1>
+    </header>
+    <main>
+      <div id="lights-container" class="lights-container">
+        <div class="light red"></div>
+        <div class="light green"></div>
+        <div class="light blue"></div>
+        <div class="light yellow"></div>
+      </div>
+      <div id="message" class="message"></div>
+      <!-- הודעה על ניקוד/הפסד -->
+    </main>
+    <footer>
+      <button id="again" style="display: none">שחק שוב</button>
+    </footer>
+
+    <div id="gameSettingsModal" class="modal">
+      <div class="modal-content">
+        <h2>Instructions</h2>
+        <ol>
+          <li>In each round, lights will turn on randomly</li>
+          <li>You must remember the order of their appearance</li>
+          <li>
+            After the performance is over, you must click on the lights in order
+          </li>
+          <li>You did succeed, you will get a score</li>
+          <li>
+            Note, with each round the level of difficulty increases but the
+            score increases accordingly
+          </li>
+          <li>Good luck...</li>
+        </ol>
+        <button id="startGame">התחל משחק</button>
+      </div>
+    </div>
+
+    <script src="../Java Script/light_gameScript.js"></script>
+  </body>
+</html>

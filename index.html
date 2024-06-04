@@ -9,7 +9,8 @@
   <body>
     <div class="container">
       <header>
-        <h1>Welcome to Beni's webSite games</h1>
+        <img src="./images/website logo.png" alt="Website Logo" class="logo" />
+        <h1>Welcome to Beni's Website Games</h1>
         <p>Your gateway to the best experience</p>
       </header>
       <div class="form-container">
@@ -20,11 +21,13 @@
               type="text"
               id="login-username"
               placeholder="Username"
+              minlength="2"
               required />
             <input
               type="password"
               id="login-password"
               placeholder="Password"
+              minlength="3"
               required />
             <button type="submit" id="submit_login">Login</button>
           </form>
@@ -39,16 +42,19 @@
               type="text"
               id="register-firstname"
               placeholder="First Name"
+              minlength="2"
               required />
             <input
               type="text"
               id="register-lastname"
               placeholder="Last Name"
+              minlength="2"
               required />
             <input
               type="text"
               id="register-username"
               placeholder="Choose Username"
+              minlength="2"
               required />
             <input
               type="email"
@@ -59,6 +65,7 @@
               type="password"
               id="register-password"
               placeholder="Password"
+              minlength="3"
               required />
             <button type="submit" id="submit_register">Register</button>
           </form>
