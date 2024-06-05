@@ -23,26 +23,26 @@ header nav {
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
+  background-color: black;
 }
 
 header nav button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #333;
   color: #ffffff;
   cursor: pointer;
   font-size: 16px;
 }
 
-header nav button#home:hover,
-header nav button#settings:hover {
-  background-color: #0056b3;
+header nav button:hover {
+  background-color: black;
 }
 
-header nav button#logout {
+/* header nav button#logout {
   background-color: red;
-}
+} */
 
 header nav button#logout:hover {
   background-color: #d60000;
@@ -108,7 +108,7 @@ header h1 {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  text-align: center;
+  text-align: left;
 }
 
 .modal-content h2 {

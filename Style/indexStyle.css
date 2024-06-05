@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+  margin-top: 10vh;
   background: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -23,7 +24,7 @@ header {
 }
 
 header .logo {
-  width: 100px; /* Adjust the size as needed */
+  width: 300px; /* Adjust the size as needed */
   margin-bottom: 20px;
 }
 

@@ -3,10 +3,10 @@ let sequence = []; // מערך לשמירת רשימת האורות שנדלקו
 let userSequence = []; // מערך לשמירת לחיצות המשתמש לפי הסדר
 
 document.addEventListener("DOMContentLoaded", () => {
-  const startButton = document.getElementById("startGame");
-  const modal = document.getElementById("gameSettingsModal");
-  const againButton = document.getElementById("again");
-  const message = document.getElementById("message");
+  const startButton = document.querySelector("#startGame");
+  const modal = document.querySelector("#gameSettingsModal");
+  const againButton = document.querySelector("#again");
+  const message = document.querySelector("#message");
 
   // מאזין לכפתור התחל
   startButton.addEventListener("click", () => {
@@ -54,6 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // פונקציה שמטפלת בלחיצות המשתמש
   function handleUserClick(event) {
+    // event.style.opacity = "0.3";
+    // setTimeout(() => {
+    //   event.style.opacity = "0.2";
+    // }, 200);
     const parent = event.target.parentElement;
     const position = Array.from(parent.children).indexOf(event.target);
 
@@ -62,24 +66,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // בודק אם המשתמש השלים את הרצף הנדרש
     if (userSequence.length === sequence.length) {
       if (JSON.stringify(userSequence) === JSON.stringify(sequence)) {
-        message.textContent = `You earned ${counter} points!`; // מציג הודעה על הנקודות
+        message.innerText = `You earned ${counter} points!`; // מציג הודעה על הנקודות
         message.style.color = "green";
         let user = JSON.parse(localStorage.getItem("current user"));
-        user.score += counter;
+        user.score += counter; //מעדכן את הניקוד הכללי של המשתמש הנוכחי
         localStorage.setItem(user.user_name, JSON.stringify(user));
         localStorage.setItem("current user", JSON.stringify(user));
         userSequence = [];
         setTimeout(() => {
-          message.textContent = ""; // מסיר את ההודעה לאחר שניה
+          message.innerText = ""; // מסיר את ההודעה לאחר שניה
           game(); // ממשיך לסיבוב הבא
         }, 1000);
         counter++;
       } else {
-        message.textContent = "you failed!"; // מציג הודעת הפסד
+        message.innerText = "you failed!"; // מציג הודעת הפסד
         message.style.color = "red";
         showLossImage(); // מציג תמונת הפסד
         userSequence = [];
-        document.getElementById("again").style.display = "block"; // מציג את כפתור המשחק שוב
+        document.querySelector("#again").style.display = "block"; // מציג את כפתור המשחק שוב
       }
     }
   }
@@ -88,12 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function showLossImage() {
     const lossImage = document.createElement("img");
     lossImage.src = "../images/Monster.png"; // נתיב לתמונה
-    lossImage.className = "loss-image";
+    lossImage.classList.add("loss-image");
     document.body.appendChild(lossImage);
 
-    setTimeout(() => {
-      lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
-    }, 0);
+    // setTimeout(() => {
+    //   lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
+    // }, 0);
 
     setTimeout(() => {
       lossImage.remove(); // מסיר את התמונה אחרי 2 שניות
@@ -102,11 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // מאזין לכפתור משחק שוב
   againButton.addEventListener("click", () => {
-    location.reload(); // מטעין מחדש את הדף
+    location.reload(); // טוען מחדש את הדף
   });
 });
 document.querySelector("#logout").addEventListener("click", () => {
-  // הוספת תפקוד לוג-אאוט
+  // הגדרת  לוג-אאוט
   window.location.replace("../index.html");
 });
 

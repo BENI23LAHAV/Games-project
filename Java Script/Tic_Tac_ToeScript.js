@@ -234,6 +234,7 @@ function drawGame() {
   // תיקו
   document.querySelector("#turn").innerText = "The game ended in a draw";
   showRestartButton();
+
   let user = JSON.parse(localStorage.getItem("current user"));
   user.score += 1;
   localStorage.setItem(user.user_name, JSON.stringify(user));
@@ -253,9 +254,9 @@ function showLossImage() {
   lossImage.className = "loss-image";
   document.body.appendChild(lossImage);
 
-  setTimeout(() => {
-    lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
-  }, 0);
+  // setTimeout(() => {
+  //   lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
+  // }, 0);
 
   setTimeout(() => {
     lossImage.remove(); // מסיר את התמונה אחרי 2 שניות

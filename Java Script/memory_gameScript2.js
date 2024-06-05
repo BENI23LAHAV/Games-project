@@ -135,9 +135,9 @@ function showLossImage() {
   lossImage.className = "loss-image";
   document.body.appendChild(lossImage);
 
-  setTimeout(() => {
-    lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
-  }, 0);
+  // setTimeout(() => {
+  //   lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
+  // }, 0);
 
   setTimeout(() => {
     lossImage.remove(); // מסיר את התמונה אחרי 2 שניות

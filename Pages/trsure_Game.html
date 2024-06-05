@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treasure Game</title>
+    <link rel="stylesheet" href="../Style/Treasure_gameSStyle.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="home">Home</button>
+        <button id="logout">Logout</button>
+        <button id="settings">Settings</button>
+      </nav>
+      <h1>Let's Play Treasure Game</h1>
+    </header>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p>Instructions</p>
+        <ol>
+          <li>The goal of the game is... to win😊</li>
+          <li>
+            In front of you are 9 slots, under one of the slots is a treasure.
+          </li>
+          <li>
+            You have to find the treasure but quickly, you only have 5 tries.
+          </li>
+          <li>If you did succeed, a score will be added to you.</li>
+          <li>
+            Put ❤️ the faster you find the treasure the more points you get!
+          </li>
+        </ol>
+        <button id="understand">Ok let's start</button>
+      </div>
+    </div>
+    <div class="game">
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+      <div class="box not imageMark"></div>
+    </div>
+    <p id="Chances">Chances: 5</p>
+    <script src="../Java Script/Treasure_GameScript.js"></script>
+  </body>
+</html>

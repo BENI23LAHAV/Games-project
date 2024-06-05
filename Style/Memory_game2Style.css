@@ -49,9 +49,6 @@ header nav button {
 header nav button:hover {
   background-color: #111;
 }
-header nav button#logout {
-  background-color: #333;
-}
 
 header nav button#logout:hover {
   background-color: #d60000;
@@ -223,4 +220,3 @@ header h1 {
   color: red;
   margin-top: 20px;
 }
-/* Existing styles... */

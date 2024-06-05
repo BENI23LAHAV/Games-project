@@ -47,7 +47,8 @@ function login(event) {
   }, 2000);
 }
 
-function registe() {
+function registe(event) {
+  event.preventDefault();
   if (
     !localStorage.getItem(document.querySelector("#register-username").value)
   ) {
@@ -66,7 +67,7 @@ function registe() {
       person.email &&
       person.password
     ) {
-      console.log("we are here");
+      // console.log("we are here");
       localStorage.setItem(
         document.querySelector("#register-username").value,
         JSON.stringify(person)
