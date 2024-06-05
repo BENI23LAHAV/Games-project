@@ -31,8 +31,13 @@ header .logo {
   margin-bottom: 20px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 header button {
-  align-self: flex-end;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -42,9 +47,19 @@ header button {
   margin-bottom: 20px;
   cursor: pointer;
 }
+
+header button#top-score {
+  background-color: #333;
+}
+
+header button#top-score:hover {
+  background-color: black;
+}
+
 header button:hover {
   background-color: red;
 }
+
 header h1 {
   margin: 0;
   color: #333;

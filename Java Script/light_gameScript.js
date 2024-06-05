@@ -109,17 +109,18 @@ document.addEventListener("DOMContentLoaded", () => {
     location.reload(); // טוען מחדש את הדף
   });
 });
-document.querySelector("#logout").addEventListener("click", () => {
-  // הגדרת  לוג-אאוט
-  window.location.replace("../index.html");
-});
-
+// פעולת כפתורי הניווט
 document.querySelector("#home").addEventListener("click", () => {
-  // הוספת ניווט לעמוד הבית
+  // ניווט לעמוד הבית
   window.location.replace("../Pages/menu.html");
 });
 
-document.querySelector("#settings").addEventListener("click", () => {
-  // הוספת ניווט לעמוד ההגדרות
-  window.location.replace("../Settings/settings.html");
+document.querySelector("#logout").addEventListener("click", () => {
+  // ניווט לעמוד הכניסה
+  window.location.replace("../index.html");
+});
+
+document.querySelector("#top_score").addEventListener("click", () => {
+  // ניווט לעמוד הניקוד
+  window.location.replace("../Pages/Top_score.html");
 });

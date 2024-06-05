@@ -67,14 +67,32 @@ function registe(event) {
       person.email &&
       person.password
     ) {
-      // console.log("we are here");
       localStorage.setItem(
         document.querySelector("#register-username").value,
         JSON.stringify(person)
       );
+      let a = document.createElement("a");
+      a.setAttribute("id", "show-login");
+      a.setAttribute("src", "#");
+      a.innerText = "Login";
+      document.querySelector("#already").textContent =
+        "You have successfully registered ";
+      document.querySelector("#already").style.color = "green";
+      document.querySelector("#already").append(a);
+      a.addEventListener("click", loginPage);
+      a.style.cursor = "pointer";
     }
   } else {
+    let a = document.createElement("a");
+    a.setAttribute("id", "show-login");
+    a.setAttribute("src", "#");
+
+    a.innerText = "Login";
+    document.querySelector("#already").innerText = " Already have an account? ";
+    document.querySelector("#already").style.color = "green";
+    document.querySelector("#already").append(a);
     document.querySelector("#already").style.color = "red";
+    a.addEventListener("click", loginPage);
     setTimeout(() => {
       document.querySelector("#already").style.color = "black";
     }, 2000);
