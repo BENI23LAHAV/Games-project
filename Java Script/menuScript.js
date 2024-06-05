@@ -24,11 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // בדיקת הניקוד של המשתמש ושינוי הכיתוב והלינק בהתאם
-  for (let [id, minScore] of Object.entries(minScores)) {
-    let linkElement = document.querySelector(`#${id}`);
-    if (username.score < minScore) {
-      // אם הניקוד נמוך מהמינימום, שינוי הכיתוב והלינק
-      linkElement.textContent = `minimum ${minScore} score`;
+
+  for (const key in minScores) {
+    let linkElement = document.querySelector(`#${key}`);
+
+    if (username.score < minScores[key]) {
+      linkElement.innerText = `minimum ${minScores[key]} score 🔒`;
       linkElement.href = "";
     }
   }

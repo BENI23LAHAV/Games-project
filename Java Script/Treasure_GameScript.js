@@ -1,7 +1,9 @@
 let Chances = 5;
 let x = Math.floor(Math.random() * 9);
 document.querySelectorAll(".box")[x].classList.add("win");
-
+document.querySelector("#understand").addEventListener("click", () => {
+  document.querySelector("#myModal").style.display = "none";
+});
 function game(event) {
   let clickedElement = event.target;
 
