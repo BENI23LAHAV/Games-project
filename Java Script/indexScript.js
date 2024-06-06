@@ -32,8 +32,6 @@ function login(event) {
 
     // בדיקה אם הסיסמה שהוזנה תואמת לסיסמה ב-localStorage
     if (userDetails.password === password) {
-      // console.log("great you are in");
-
       localStorage.setItem("current user", localStorage.getItem(username));
       window.location.replace("./Pages/menu.html");
       return;

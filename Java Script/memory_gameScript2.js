@@ -106,12 +106,21 @@ function endGame() {
   }
 
   if (lose) {
-    document.querySelector(".modal-content").innerText = "You lose the game";
-    document.querySelector(".modal-content").style.color = "red";
+    document.querySelector(".modal-content").innerText = "";
+    let h1 = document.createElement("h1");
+    h1.innerText = "You lose the game";
+    h1.style.color = "red";
+    document.querySelector(".modal-content").append(h1);
+
     showLossImage();
   } else {
-    document.querySelector(".modal-content").innerText = "You win the game";
+    let h1 = document.createElement("h1");
+    h1.innerText = "You win the game";
+    h1.style.color = "green";
+
+    document.querySelector(".modal-content").innerText = `You erned a 5 points`;
     document.querySelector(".modal-content").style.color = "green";
+    document.querySelector(".modal-content").appendChild(h1);
     let user = JSON.parse(localStorage.getItem("current user"));
     user.score += 5;
     localStorage.setItem(user.user_name, JSON.stringify(user)); // עדכון ניקוד ב-local storage
@@ -122,7 +131,7 @@ function endGame() {
 
   let but = document.createElement("button");
   but.innerText = "Let's play again";
-  but.setAttribute("id", "again"); // הוספת כפתור למשחק נוסף
+  but.setAttribute("id", "playAgain"); // הוספת כפתור למשחק נוסף
   but.addEventListener("click", () => {
     location.reload();
   });
@@ -134,10 +143,6 @@ function showLossImage() {
   lossImage.src = "../images/Monster.png"; // נתיב לתמונה
   lossImage.className = "loss-image";
   document.body.appendChild(lossImage);
-
-  // setTimeout(() => {
-  //   lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
-  // }, 0);
 
   setTimeout(() => {
     lossImage.remove(); // מסיר את התמונה אחרי 2 שניות

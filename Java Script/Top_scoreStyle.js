@@ -6,10 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const users = [];
   for (let i = 0; i < localStorage.length; i++) {
     let key = localStorage.key(i);
-    let user = JSON.parse(localStorage.getItem(key));
-    // בדיקה שהנתונים הם של משתמש עם שם וציון
-    if (user && user.user_name && user.score) {
-      users.push(user);
+    if (key !== "current user") {
+      // התעלמות מהמשתמש הנוכחי
+      let user = JSON.parse(localStorage.getItem(key));
+      // בדיקה שהנתונים הם של המשתמש עם שם וציון
+      if (user && user.user_name && user.score) {
+        users.push(user);
+      }
     }
   }
 
@@ -19,18 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // יצירת והוספת פרטי המשתמשים לרשימת הציונים
   topUsers.forEach((user) => {
-    // יצירת אלמנט עבור כל כניסה ברשימת הציונים
+    // יצירת דיב עבור כל כניסה ברשימת הציונים
     const scoreEntry = document.createElement("div");
     scoreEntry.classList.add("score-entry");
 
     // יצירת אלמנט עבור שם המשתמש
     const userName = document.createElement("h2");
-    userName.textContent = user.user_name;
+    userName.innerText = user.user_name;
     scoreEntry.appendChild(userName);
 
     // יצירת אלמנט עבור הציון של המשתמש
     const userScore = document.createElement("p");
-    userScore.textContent = `Score: ${user.score}`;
+    userScore.innerText = `Score: ${user.score}`;
     scoreEntry.appendChild(userScore);
 
     // הוספת הכניסה לרשימת הציונים

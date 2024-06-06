@@ -64,7 +64,6 @@ function game(event) {
 }
 
 function computerTurn() {
-  // document.querySelector(".bord").style.cursor = "progress";
   if (gameOver) return;
 
   // בדיקה אם יש לפחות משבצת אחת פנויה
@@ -83,12 +82,9 @@ function computerTurn() {
     document.querySelector("#turn").innerText = "Your turn";
 
     endGame();
-  } else {
-    // document.querySelector("#turn").innerText = "The game ended";
   }
 
   isComputerTurn = false;
-  // document.querySelector(".bord").style.cursor = "pointer";
 }
 function findBestMove(player) {
   let board = document.querySelector(".bord").children;
@@ -253,10 +249,6 @@ function showLossImage() {
   lossImage.src = "../images/Monster.png"; // נתיב לתמונה
   lossImage.className = "loss-image";
   document.body.appendChild(lossImage);
-
-  // setTimeout(() => {
-  //   lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
-  // }, 0);
 
   setTimeout(() => {
     lossImage.remove(); // מסיר את התמונה אחרי 2 שניות

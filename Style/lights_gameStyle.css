@@ -40,10 +40,6 @@ header nav button:hover {
   background-color: black;
 }
 
-/* header nav button#logout {
-  background-color: red;
-} */
-
 header nav button#logout:hover {
   background-color: #d60000;
 }
