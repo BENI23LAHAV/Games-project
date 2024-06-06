@@ -1,3 +1,9 @@
+"use strict";
+
+if (!localStorage.getItem("current user")) {
+  window.location.replace("../index.html"); //מניעת כניסת משתמש לא רשום
+}
+
 let Chances = 5;
 let x = Math.floor(Math.random() * 9);
 document.querySelectorAll(".box")[x].classList.add("win");

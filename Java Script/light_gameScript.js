@@ -1,3 +1,8 @@
+"use strict";
+if (!localStorage.getItem("current user")) {
+  window.location.replace("../index.html"); //מניעת כניסת משתמש לא רשום
+}
+
 let counter = 1; // סופר את מספר האורות שנדלקו בכל סיבוב
 let sequence = []; // מערך לשמירת רשימת האורות שנדלקו לפי הסדר
 let userSequence = []; // מערך לשמירת לחיצות המשתמש לפי הסדר
@@ -95,10 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lossImage.src = "../images/Monster.png"; // נתיב לתמונה
     lossImage.classList.add("loss-image");
     document.body.appendChild(lossImage);
-
-    // setTimeout(() => {
-    //   lossImage.style.transform = "scale(1.5)"; // מגדיל את התמונה
-    // }, 0);
 
     setTimeout(() => {
       lossImage.remove(); // מסיר את התמונה אחרי 2 שניות

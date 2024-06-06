@@ -1,4 +1,8 @@
-var modal = document.getElementById("myModal");
+"use strict";
+if (!localStorage.getItem("current user")) {
+  window.location.replace("../index.html"); //מניעת כניסת משתמש לא רשום
+}
+let modal = document.getElementById("myModal");
 
 let user; //משתנה עבור מה המשתמש בחר להיות
 let gameOver = false; // משתנה שמציין אם המשחק נגמר

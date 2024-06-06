@@ -1,3 +1,7 @@
+"use strict";
+if (!localStorage.getItem("current user")) {
+  window.location.replace("../index.html"); //מניעת כניסת משתמש לא רשום
+}
 let arrImages = [
   "mango",
   "watermelon",

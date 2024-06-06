@@ -1,3 +1,4 @@
+"use strict";
 localStorage.removeItem("current user"); // נועד לאיפוס המשתמש הנוכחי שמשחק
 
 document

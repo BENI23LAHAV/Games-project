@@ -1,3 +1,8 @@
+"use strict";
+if (!localStorage.getItem("current user")) {
+  window.location.replace("../index.html"); //מניעת כניסת משתמש לא רשום
+}
+
 document.querySelector("#logout").addEventListener("click", () => {
   window.location.replace("../index.html");
 });

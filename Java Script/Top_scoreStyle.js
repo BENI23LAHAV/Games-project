@@ -1,3 +1,9 @@
+"use strict";
+
+if (!localStorage.getItem("current user")) {
+  window.location.replace("../index.html"); //מניעת כניסת משתמש לא רשום
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // אתחול משתנה שמחזיק את האלמנט של רשימת הניקוד
   const scoreList = document.querySelector("#score-list");
