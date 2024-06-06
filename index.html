@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
+    <link rel="stylesheet" href="../Style/normalize.css" />
     <link rel="stylesheet" href="./Style/indexStyle.css" />
   </head>
   <body>
@@ -26,8 +27,8 @@
             <input
               type="password"
               id="login-password"
-              placeholder="Password"
-              minlength="3"
+              placeholder="Password (minimum 6 chars)"
+              minlength="6"
               required />
             <button type="submit" id="submit_login">Login</button>
           </form>
@@ -64,8 +65,8 @@
             <input
               type="password"
               id="register-password"
-              placeholder="Password"
-              minlength="3"
+              placeholder="Password (minimum 6 chars)"
+              minlength="6"
               required />
             <button type="submit" id="submit_register">Register</button>
           </form>

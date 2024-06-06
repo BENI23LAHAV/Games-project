@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         user.score += counter; //מעדכן את הניקוד הכללי של המשתמש הנוכחי
         localStorage.setItem(user.user_name, JSON.stringify(user));
         localStorage.setItem("current user", JSON.stringify(user));
+
         userSequence = [];
         setTimeout(() => {
           message.innerText = ""; // מסיר את ההודעה לאחר שניה
