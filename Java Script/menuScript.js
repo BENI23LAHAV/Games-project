@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const minScores = {
     Tic_play: 50,
     Lights_play: 100,
-    Treasure_play: 150,
+    Memory_play: 150,
   };
 
   // בדיקת הניקוד של המשתמש ושינוי הכיתוב והלינק בהתאם
